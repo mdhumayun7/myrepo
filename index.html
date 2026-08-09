@@ -1,11 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THALA — Wear the Season</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> This version V5</h1>
+
+<!-- announcement bar -->
+<div class="announce">
+  <p>Free shipping over ₹999 &nbsp;·&nbsp; Easy 14-day returns &nbsp;·&nbsp; New drops every Friday</p>
+</div>
+
+<!-- header -->
+<header class="site-header">
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <a href="#" class="logo">THALA</a>
+
+  <nav class="main-nav" id="mainNav">
+    <a href="#" class="nav-link active" data-filter="all">All</a>
+    <a href="#" class="nav-link" data-filter="women">Women</a>
+    <a href="#" class="nav-link" data-filter="men">Men</a>
+    <a href="#" class="nav-link" data-filter="kids">Kids</a>
+    <a href="#" class="nav-link" data-filter="beauty">Beauty</a>
+    <a href="#" class="nav-link sale" data-filter="sale">Sale</a>
+  </nav>
+
+  <div class="header-actions">
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search for products, brands...">
+    </div>
+
+    <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.1 2.2 4 6.3 4c2.2 0 3.9 1.2 5.7 3.3C13.8 5.2 15.5 4 17.7 4c4.1 0 5.9 4.1 4.3 7.9C19.5 16.4 12 21 12 21z" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span class="badge" id="wishCount">0</span>
+    </button>
+
+    <button class="icon-btn" id="cartBtn" aria-label="Cart">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h2l2.2 11a2 2 0 0 0 2 1.6h6.6a2 2 0 0 0 2-1.6L20 9H6.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="21" r="1.3" fill="currentColor"/><circle cx="17.5" cy="21" r="1.3" fill="currentColor"/></svg>
+      <span class="badge accent" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">AW26 Edit</p>
+    <h1>Dress<br>for the<br><em>plot twist.</em></h1>
+    <p class="hero-sub">Fresh drops from 40+ labels, curated weekly. No basics, only pieces worth repeating.</p>
+    <a href="#grid" class="btn-primary">Shop the edit</a>
+  </div>
+  <div class="hero-mosaic">
+    <div class="tile tile-1"><img src="https://picsum.photos/seed/thala-hero-1/500/650" alt="Look 1"></div>
+    <div class="tile tile-2"><img src="https://picsum.photos/seed/thala-hero-2/500/400" alt="Look 2"></div>
+    <div class="tile tile-3"><img src="https://picsum.photos/seed/thala-hero-3/500/400" alt="Look 3"></div>
+    <div class="tile tile-tag">
+      <span class="tag-line">UP TO</span>
+      <span class="tag-num">60%</span>
+      <span class="tag-line">OFF</span>
+    </div>
+  </div>
+</section>
+
+<!-- category strip -->
+<section class="categories">
+  <div class="cat-scroll">
+    <a class="cat-chip" data-filter="women"><img src="https://picsum.photos/seed/cat-women/160/160" alt=""><span>Women</span></a>
+    <a class="cat-chip" data-filter="men"><img src="https://picsum.photos/seed/cat-men/160/160" alt=""><span>Men</span></a>
+    <a class="cat-chip" data-filter="kids"><img src="https://picsum.photos/seed/cat-kids/160/160" alt=""><span>Kids</span></a>
+    <a class="cat-chip" data-filter="beauty"><img src="https://picsum.photos/seed/cat-beauty/160/160" alt=""><span>Beauty</span></a>
+    <a class="cat-chip" data-filter="footwear"><img src="https://picsum.photos/seed/cat-shoes/160/160" alt=""><span>Footwear</span></a>
+    <a class="cat-chip" data-filter="accessories"><img src="https://picsum.photos/seed/cat-acc/160/160" alt=""><span>Accessories</span></a>
+  </div>
+</section>
+
+<!-- product grid -->
+<section class="grid-section" id="grid">
+  <div class="grid-head">
+    <h2>Trending now</h2>
+    <div class="grid-tabs" id="gridTabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="women">Women</button>
+      <button class="tab" data-filter="men">Men</button>
+      <button class="tab" data-filter="kids">Kids</button>
+      <button class="tab" data-filter="beauty">Beauty</button>
+      <button class="tab" data-filter="footwear">Footwear</button>
+      <button class="tab" data-filter="accessories">Accessories</button>
+    </div>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+  <p class="empty-state" id="emptyState" hidden>No pieces match that search — try another word or clear filters.</p>
+</section>
+
+<!-- promo banner -->
+<section class="promo">
+  <div class="promo-inner">
+    <p class="eyebrow light">Members only</p>
+    <h2>Extra 10% off, every order.<br>No minimum, no fine print.</h2>
+    <a href="#" class="btn-ghost">Join free</a>
+  </div>
+</section>
+
+<!-- newsletter -->
+<section class="newsletter">
+  <h2>Get the drop before it sells out</h2>
+  <p>One email a week. New arrivals, restocks, and a discount code for signing up.</p>
+  <form class="news-form" onsubmit="return false;">
+    <input type="email" placeholder="you@email.com" required>
+    <button type="submit" class="btn-primary">Notify me</button>
+  </form>
+</section>
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <p class="logo small">THALA</p>
+      <p>Fashion that doesn't blink first.</p>
+    </div>
+    <div class="foot-col">
+      <h3>Shop</h3>
+      <a href="#">Women</a>
+      <a href="#">Men</a>
+      <a href="#">Kids</a>
+      <a href="#">Beauty</a>
+      <a href="#">Sale</a>
+    </div>
+    <div class="foot-col">
+      <h3>Help</h3>
+      <a href="#">Track order</a>
+      <a href="#">Returns</a>
+      <a href="#">Size guide</a>
+      <a href="#">Contact us</a>
+    </div>
+    <div class="foot-col">
+      <h3>Company</h3>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+      <a href="#">Sustainability</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 THALA. All rights reserved.</span>
+    <span>Cash on delivery · UPI · Cards · Wallets</span>
+  </div>
+</footer>
+
+<!-- cart drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your bag</h3>
+    <button id="closeCart" aria-label="Close">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmptyMsg">Your bag is empty. Go find something good.</p>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-total-row">
+      <span>Subtotal</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+    <button class="btn-primary full">Checkout</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
 </body>
 </html>
